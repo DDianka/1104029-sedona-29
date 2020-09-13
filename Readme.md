@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Diana Dianka](https://up.htmlacademy.ru/htmlcss/29/user/1104029).
-* Наставник: `Неизвестно`.
+* Наставник: `[Марина Удовенко](https://htmlacademy.ru/profile/id7570)`.
 
 ---
 

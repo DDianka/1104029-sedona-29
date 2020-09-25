@@ -3,27 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="css/sedona.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page page-body">
     <header>
       <h1 hidden>Sedona</h1>
-      <nav>
+      <nav class="site-nav">
         <ul>
-          <li> <a href="">ИНФОРМАЦИЯ</a></li>
-          <li> <a href="">ФОТО И ВИДЕО</a></li>
-          <li> <a href="index.html">CITY OF SEDONA</a></li>
+          <li> <a href="blank.html">ИНФОРМАЦИЯ</a></li>
+          <li> <a href="blank.html">ФОТО И ВИДЕО</a></li>
           <li> <a href="blank.html">КАРТА ШТАТА</a></li>
           <li> <a href="#">ГОСТИННИЦЫ</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
+      <section class="filter">
         <h2 hidden>Filter</h2>
-        <h3>
+        <h3 class="filter-header">
           ИНФРАСТРУКТУРА:
         </h3>
-        <ul>
+        <ul class="filter-items">
           <li>
             <input type="checkbox" id="pool"> <label for="pool">БАССЕЙН</label>
           </li>
@@ -34,15 +36,15 @@
             <input type="checkbox" id="wifi"><label for="wifi"> WI-FI></label>
           </li>
         </ul>
-        <h3>ТИП ЖИЛЬЯ</h3>
-        <ul>
+        <h3 class="filter-header">ТИП ЖИЛЬЯ</h3>
+        <ul class="filter-items">
           <li><input type="checkbox" id="hotel"> <label for="hotel">ГОСТИННИЦА</label></li>
           <li><input type="checkbox" id="motel"> <label for="motel">МОТЕЛЬ</label></li>
           <li><input type="checkbox" id="aparts"> <label for="aparts">АПАРТАМЕНТЫ</label></li>
         </ul>
       </section>
       <section>
-        <h3>
+        <h3 class="filter-header">
           СТОИМОСТЬ В СУТКИ (Р):
         </h3>
         <!-- ОТ ДО и ползунок-->
@@ -51,63 +53,63 @@
         <label for="to">ДО</label>
         <input  id="to" type="number" placeholder="3000"> <br>
         <input  type="range"> <br>
-        <button type="button"> ПОКАЗАТЬ </button>
+        <button type="button" class="button show"> ПОКАЗАТЬ </button>
       </section>
       <section>
         <h2 hidden>Результаты поиска</h2>
-        <h3>
+        <h3 class="found">
           НАЙДЕНО: 3
         </h3>
-        <p>СОРТИРОВКА: </p>
-        <ul>
+        <p class="sort">СОРТИРОВКА: </p>
+        <ul class="sorting-links">
           <li>
-            <a href="">ПО ЦЕНЕ</a>
+            <a href="">ПО ЦЕНЕ </a>
           </li>
           <li>
             <a href=""> ПО ТИПУ </a>
           </li>
           <li>
-            <a href="">ПО РЕЙТИНГУ</a>
+            <a href="">ПО РЕЙТИНГУ </a>
           </li>
         </ul>
-        <ul>
+        <ul class="hotels">
           <li>
             <h3>AMARA RESORT & SPA</h3>
             <p>ГОСТИННИЦА    ОТ 4000 Р.</p>
-            <a href=""> ПОДРОБНЕЕ </a>
-            <a href="">ЗАa href=""
+            <a class="more-info button " href=""> ПОДРОБНЕЕ </a>
+            <a class="book button" href="">Забронировать</a>
           </li>
           <li>
             <h3>DESERT QUAIL INN</h3>
             <p>МОТЕЛЬ        ОТ 4000 Р.</p>
-            <a href=""> ПОДРОБНЕЕ </a>
-            <a href="">ЗАБРОНИРОВАТЬ</a>
+            <a class="button more-info" href=""> ПОДРОБНЕЕ </a>
+            <a class="button book" href="">ЗАБРОНИРОВАТЬ</a>
           </li>
           <li>
             <h3>VILLAS AT POCO DIABLO</h3>
             <p>АПАРТАМЕНТЫ    ОТ 4000 Р.</p>
-            <a href=""> ПОДРОБНЕЕ </a>
-            <a href="">ЗАБРОНИРОВАТЬ</a>
+            <a class="button more-info" href=""> ПОДРОБНЕЕ </a>
+            <a class="button book" href="">ЗАБРОНИРОВАТЬ</a>
           </li>
         </ul>
       </section>
     </main>
     <footer>
-      <section>
-        <p>
+      <section class="footer-contacts">
+        <p class="footer-p">
           #VISITSEDONA<br>
-          ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a>
+          ТЕЛ: <a class="footer-phone" href="tel:+74956660166">+7(495) 666-01-66</a>
         </p>
       </section>
-      <section>
-        <ul>
-          <li>
+      <section class="footer-social">
+        <ul class="social-networks">
+          <li class="twitter">
             <a href="">Твиттер</a>
           </li>
-          <li>
+          <li class="facebook">
             <a href="">Фейсбук</a>
           </li>
-          <li>
+          <li class="youtube">
             <a href="">Ютуб</a>
           </li>
         </ul>

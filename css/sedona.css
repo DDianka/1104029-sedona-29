@@ -43,6 +43,7 @@ h2 {
 }
 p {
   font-weight: 400;
+  color: var(--light-black);
 }
 
 .logo-img {
@@ -94,6 +95,9 @@ p {
   height: 256px;
   text-align: center;
 }
+.list-item p {
+  color: var(--white);
+}
 .footer-p {
   font-weight: bold;
   color: var(--black);
@@ -105,6 +109,11 @@ p {
 }
 .gray-bckgr-list {
   background-color: var(--light-gray);
+}
+.appointment h3 {
+  font-size: 30px;
+  line-height: 24px;
+  text-align: center;
 }
 /* inner page */
 
@@ -149,6 +158,7 @@ p {
 .button {
   color: var(--white);
   font-size: 14px;
+  line-height: 21px;
   font-weight: normal;
 }
 .more-info {

@@ -212,4 +212,20 @@ p {
   cursor: pointer;
   color: var(--gray)
 }
-
+.facebook,
+.twitter,
+.youtube {
+  width: 46px;
+  height: 48px;
+  background-color: var(--blue);
+  margin: 6px;
+}
+.facebook img {
+  padding: 13px 17px 13px 17px;
+}
+.twitter img {
+  padding:  16px 14px 15px 15px;
+}
+.youtube img {
+  padding: 16px 13px 16px 13px;
+}

@@ -27,6 +27,15 @@ body {
   font-weight: 700;
   background-position: top center;
 }
+.page {
+  height: 100%;
+}
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
 li {
   list-style-type: none;
 }
@@ -45,18 +54,32 @@ p {
   font-weight: 400;
   color: var(--light-black);
 }
-
-.logo-img {
-   background-image:url("../img/sedona.svg") ;
-   background-repeat: no-repeat;
-   width: 1200px;
-   height: 509px;
+.main-nav {
+  display: grid;
+  width: 1200px;
+  height: 70px;
+  margin: 0 auto;
 }
-.logo {
-  margin-left:371px ;
-  margin-right: 371px;
-  margin-bottom: 80px;
-  margin-top: 77px;
+.main-header-logo {
+  order: 1;
+  justify-self: center;
+  z-index: 1;
+ /* здесь логотип скрылся за бэкгроунд фото, не знаю как его поднять ,
+ вытащила черезз z-index но как поднять и сделать нормальную шапку сверху - не понимаю */
+}
+
+.main-header {
+  margin-bottom: 70px;
+  height: 56px;
+
+}
+.main-nav-wrapper {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 .site-nav a {
   color: var(--black);
@@ -75,19 +98,49 @@ p {
   color: var(--blue);
 }
 .site-nav a:active {
-  color: var(--gray);
+  color: var(--black);
+  opacity: 0.3;
+}
+.features {
+  text-align: center;
 }
 .feature-item-2 {
   text-align: center;
+}
+.logo-img {
+  background-image:url("../img/background-photo.jpg");
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 509px;
+}
+.logo {
+  margin-left:371px ;
+  margin-right: 371px;
+  margin-bottom: 80px;
+  margin-top: 77px;
 }
 .feature-item-2 h3,
 .feature-item h3{
   font-size: 21px;
   line-height: 21px;
 }
-.features-list-2 li {
-  display: inline;
+.item-img {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  column-gap: 0; /* почему это св-во не работает, как схлопнуть вместе этот див и картинку? */
 }
+.img-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.features-list-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 20px;
+  padding: 0;
+}
+
 .list-item {
   background-color: var(--blue);
   color: var(--white);
@@ -109,16 +162,26 @@ p {
 }
 .gray-bckgr-list {
   background-color: var(--light-gray);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .appointment h3 {
   font-size: 30px;
   line-height: 24px;
+}
+.appointment {
   text-align: center;
+}
+.container {
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
 }
 /* inner page */
 
 .filter {
-  background-color: var(--blue); /* временный бэк вместо картинки */
+  background-image:url("../img/background-inner-page.jpg") ;
   width: 1200px;
   height: 217px;
 }
@@ -129,7 +192,6 @@ p {
   line-height: 21px;
 }
 .filter-items {
-
   color: var(--white);
   font-weight: 400;
 }
@@ -145,7 +207,8 @@ p {
   color: var(--light-gray);
 }
 .sorting-links a:visited {
-  color: var(--gray);
+  color: var(--black);
+  opacity: 0.3;
 }
 .sorting-links a:hover {
   color:var(--blue);
@@ -210,7 +273,8 @@ p {
 }
 .hotels h3:active {
   cursor: pointer;
-  color: var(--gray)
+  color: var(--black);
+  opacity: 0.3;
 }
 .facebook,
 .twitter,

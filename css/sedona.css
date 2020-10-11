@@ -14,8 +14,8 @@
 
 }
 body {
-  width: 1280px;
-  height: 2762px;
+ min-width: 960px;
+  /*  Поечему-то когда тут была указана высота, остальная часть боди после картинки съезжала вниз, убрав высоту эта проблема пропала , высоты здесь вообще не должно было быть?*/
   min-width: 960px;
   margin: 0;
   padding: 0;
@@ -81,6 +81,14 @@ p {
   margin: 0 auto;
   padding: 0 10px;
 }
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  justify-content: center;
+}
 .site-nav a {
   color: var(--black);
   text-decoration: none;
@@ -107,11 +115,13 @@ p {
 .feature-item-2 {
   text-align: center;
 }
+
 .logo-img {
   background-image:url("../img/background-photo.jpg");
   background-repeat: no-repeat;
   width: 1200px;
   height: 509px;
+  text-align: center;
 }
 .logo {
   margin-left:371px ;
@@ -127,12 +137,13 @@ p {
 .item-img {
   display: grid;
   grid-template-columns: 1fr 2fr;
-
-  column-gap: 0; /* почему это св-во не работает, как схлопнуть вместе этот див и картинку? */
+  justify-items: start;
+  grid-column-gap: 0; /* почему это св-во не работает, как схлопнуть вместе этот див и картинку? */
 }
 .img-item {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-gap: 0;
 }
 .features-list-2 {
   display: grid;
@@ -160,10 +171,12 @@ p {
 .footer-phone {
   color: inherit;
 }
-.gray-bckgr-list {
+.advantage-list {
   background-color: var(--light-gray);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 24px;
+  padding-top: 15px;
 }
 .appointment h3 {
   font-size: 30px;
@@ -172,11 +185,18 @@ p {
 .appointment {
   text-align: center;
 }
+
 .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 1200px;
   height: 120px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.9);
+}
+.social-networks {
+  display: grid;
+
 }
 /* inner page */
 

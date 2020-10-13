@@ -11,11 +11,10 @@
   --white: #FFFFFF;
   --browner: #604E43;
   --dark-brown:#503E33;
-
+  --rating: #F2F2F2;
+  --dark-gray: #666666;
 }
 body {
- min-width: 960px;
-  /*  Поечему-то когда тут была указана высота, остальная часть боди после картинки съезжала вниз, убрав высоту эта проблема пропала , высоты здесь вообще не должно было быть?*/
   min-width: 960px;
   margin: 0;
   padding: 0;
@@ -71,7 +70,6 @@ p {
 .main-header {
   margin-bottom: 70px;
   height: 56px;
-
 }
 .main-nav-wrapper {
   display: grid;
@@ -138,7 +136,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 2fr;
   justify-items: start;
-  grid-column-gap: 0; /* почему это св-во не работает, как схлопнуть вместе этот див и картинку? */
+  grid-column-gap: 0;
 }
 .img-item {
   display: grid;
@@ -196,14 +194,42 @@ p {
 }
 .social-networks {
   display: grid;
+}
+
+/* inner page */
+.grid {
+  display: grid;
+/*  grid-template-rows: 70px 1fr 120px; */
+}
+.inner-page {
 
 }
-/* inner page */
-
 .filter {
+  display: grid;
+  grid-template-columns: 300px 300px 600px;
   background-image:url("../img/background-inner-page.jpg") ;
   width: 1200px;
   height: 217px;
+
+}
+.results {
+
+}
+.hotel {
+  outline: 5px solid rgba(150, 150, 255, 0.7);
+  outline-offset: -5px;
+
+}
+.range {
+  display: grid;
+  width: 317px;
+}
+.infrastructure {
+  margin-left: 70px;
+}
+.cost-filter {
+  display: grid;
+  grid-template-columns: 315px ;
 }
 .filter-header {
   color: var(--white);
@@ -215,6 +241,36 @@ p {
   color: var(--white);
   font-weight: 400;
 }
+.sorting-filter {
+  outline: 5px solid rgba(220, 10, 255, 0.7);
+  outline-offset: -5px;
+  display: grid;
+  grid-template-areas: "f s l";
+}
+.found {
+  grid-area: f;
+}
+.sorting-links {
+  grid-area: l;
+  display: grid;
+  grid-template-areas: "c t r";
+}
+.sort {
+  grid-area: s;
+}
+.price-sort {
+  grid-area: c;
+}
+.type-sort {
+  grid-area: t;
+}
+.rating-sort {
+  grid-area: r;
+}
+.hotels {
+  outline: 5px solid rgba(100, 150, 255, 0.7);
+  outline-offset: -5px;
+}
 .found {
   font-size: 21px;
 }
@@ -223,8 +279,9 @@ p {
   font-weight: normal;
 }
 .sorting-links a:link {
-  text-decoration: none;
-  color: var(--light-gray);
+  text-decoration: underline;
+  color: var(--black);
+
 }
 .sorting-links a:visited {
   color: var(--black);
@@ -258,7 +315,6 @@ p {
   padding: 3px 16px 3px 17px;
 }
 .show {
-  position: absolute;
   width: 137px;
   height: 36px;
   left: 584px;
@@ -312,4 +368,12 @@ p {
 }
 .youtube img {
   padding: 16px 13px 16px 13px;
+}
+.rating {
+  width: 110px;
+  height: 27px;
+  background-color: var(--rating);
+  color: var(--dark-gray);
+  text-align: center;
+  padding: 3px 12px 3px 15px;
 }

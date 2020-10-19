@@ -1,4 +1,7 @@
-
+ul {
+  padding: 0;
+  margin: 0;
+}
 :root {
   --gray:  #888888;
   --blue: #81B3D2;
@@ -13,10 +16,11 @@
   --dark-brown:#503E33;
   --rating: #F2F2F2;
   --dark-gray: #666666;
+  --border-color: #E5E5E5;
 }
 body {
   min-width: 960px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background: var(--white);
   font-size: 14px;
@@ -26,18 +30,9 @@ body {
   font-weight: 700;
   background-position: top center;
 }
-.page {
-  height: 100%;
-}
-.page-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
-}
 li {
-  list-style-type: none;
-}
+   list-style-type: none;
+ }
 a {
   text-decoration: none;
 }
@@ -53,18 +48,33 @@ p {
   font-weight: 400;
   color: var(--light-black);
 }
-.main-nav {
+.page {
+  height: 100%;
+}
+.page-body {
+  min-height: 100%;
   display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
   width: 1200px;
-  height: 70px;
   margin: 0 auto;
+  height: 56px;
+
 }
 .main-header-logo {
-  order: 1;
-  justify-self: center;
-  z-index: 1;
- /* здесь логотип скрылся за бэкгроунд фото, не знаю как его поднять ,
- вытащила черезз z-index но как поднять и сделать нормальную шапку сверху - не понимаю */
+  position: absolute;
+  left: 50%;
+  top:0;
+  transform: translateX(-50%);
+
+  width: 138px;
+  height: 70px;
+  justify-content: center;
 }
 
 .main-header {
@@ -82,28 +92,35 @@ p {
 .wrapper {
   display: grid;
   grid-template-rows: 1fr min-content;
-  width: 1200px;
+  width: 940px;
   margin: 0 auto;
   padding: 0 10px;
   justify-content: center;
 }
-.site-nav a {
+.main-nav a {
+  display: flex;
   color: var(--black);
   text-decoration: none;
   line-height: 26px;
   font-size: 14px;
   text-align: center;
 }
-.site-nav a:link {
+.main-nav ul {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+.main-nav a:link {
   color: var(--black);;
 }
-.site-nav a:visited {
+.main-nav a:visited {
   color: var(--black);
 }
-.site-nav a:hover {
+.main-nav a:hover {
   color: var(--blue);
 }
-.site-nav a:active {
+.main-nav a:active {
   color: var(--black);
   opacity: 0.3;
 }
@@ -122,10 +139,14 @@ p {
   text-align: center;
 }
 .logo {
-  margin-left:371px ;
-  margin-right: 371px;
-  margin-bottom: 80px;
-  margin-top: 77px;
+  margin: 75px 370px;
+}
+.features .header {
+  margin-top:42.5px;
+  margin-bottom: 16.5px;
+}
+.features .main-text {
+  margin-bottom: 51px;
 }
 .feature-item-2 h3,
 .feature-item h3{
@@ -146,10 +167,18 @@ p {
 .features-list-2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 20px;
+  margin-bottom: 82px;
   padding: 0;
 }
-
+.gift {
+  margin-top: 55px ;
+}
+.burger {
+  margin-top: 61px ;
+}
+.home {
+  margin-top: 60px;
+}
 .list-item {
   background-color: var(--blue);
   color: var(--white);
@@ -165,6 +194,7 @@ p {
   color: var(--black);
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
 }
 .footer-phone {
   color: inherit;
@@ -179,46 +209,45 @@ p {
 .appointment h3 {
   font-size: 30px;
   line-height: 24px;
+
 }
 .appointment {
   text-align: center;
+  margin-bottom: 145px;
+  margin-top: 58px;
 }
-
+.main-footer {
+  display: flex;
+  margin-left: 111px;
+}
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   width: 1200px;
   height: 120px;
   margin: 0 auto;
+  padding-right: 100px ;
   background: rgba(255, 255, 255, 0.9);
 }
 .social-networks {
-  display: grid;
+  display: flex;
+  flex-direction: row;
 }
 
 /* inner page */
-.grid {
-  display: grid;
-/*  grid-template-rows: 70px 1fr 120px; */
-}
-.inner-page {
 
-}
 .filter {
   display: grid;
   grid-template-columns: 300px 300px 600px;
   background-image:url("../img/background-inner-page.jpg") ;
   width: 1200px;
   height: 217px;
-
 }
-.results {
 
-}
 .hotel {
   outline: 5px solid rgba(150, 150, 255, 0.7);
   outline-offset: -5px;
-
 }
 .range {
   display: grid;

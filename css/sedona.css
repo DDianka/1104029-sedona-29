@@ -199,6 +199,9 @@ p {
 .footer-phone {
   color: inherit;
 }
+.footer-copyright p {
+  margin-right: 8px;
+}
 .advantage-list {
   background-color: var(--light-gray);
   display: grid;
@@ -234,7 +237,11 @@ p {
   display: flex;
   flex-direction: row;
 }
+.footer-copyright {
+  display: flex;
+  align-items: center;
 
+}
 /* inner page */
 
 .filter {
@@ -244,13 +251,28 @@ p {
   width: 1200px;
   height: 217px;
 }
-
+.hotel img {
+  padding: 30px 29px 30px 73px;
+  width: 135px;
+  height: 90px;
+}
 .hotel {
-  outline: 5px solid rgba(150, 150, 255, 0.7);
+  display: flex;
+}
+.cost-filter {
+  width: 317px;
+  outline: 5px solid rgba(0, 255, 255 , 0.3);
   outline-offset: -5px;
 }
 .range {
-  display: grid;
+  display: flex;
+}
+.range button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
   width: 317px;
 }
 .infrastructure {
@@ -271,35 +293,24 @@ p {
   font-weight: 400;
 }
 .sorting-filter {
-  outline: 5px solid rgba(220, 10, 255, 0.7);
-  outline-offset: -5px;
-  display: grid;
-  grid-template-areas: "f s l";
+  display: flex;
+  align-items: center;
+  margin-left: 73px;
 }
-.found {
-  grid-area: f;
+
+.sort {
+  margin: 31px 40px 32px 46px;
 }
 .sorting-links {
-  grid-area: l;
-  display: grid;
-  grid-template-areas: "c t r";
+  display: flex;
 }
-.sort {
-  grid-area: s;
+.sorting-links li:first-child {
+  margin-right: 32px;
 }
-.price-sort {
-  grid-area: c;
+.sorting-links li:nth-child(2) {
+  margin-right: 33px;
 }
-.type-sort {
-  grid-area: t;
-}
-.rating-sort {
-  grid-area: r;
-}
-.hotels {
-  outline: 5px solid rgba(100, 150, 255, 0.7);
-  outline-offset: -5px;
-}
+
 .found {
   font-size: 21px;
 }
@@ -310,7 +321,7 @@ p {
 .sorting-links a:link {
   text-decoration: underline;
   color: var(--black);
-
+  opacity: 0.3;
 }
 .sorting-links a:visited {
   color: var(--black);
@@ -369,6 +380,9 @@ p {
 .more-info:active {
   background-color: var(--deep-blue) ;
 }
+.hotels {
+  margin-right: 73px;
+}
 .hotels h3 {
   font-size: 21px;
 }
@@ -389,6 +403,17 @@ p {
   background-color: var(--blue);
   margin: 6px;
 }
+.facebook:hover,
+.twitter:hover,
+.youtube:hover {
+  background-color: var(--bluer);
+}
+.facebook:active,
+.twitter:active,
+.youtube:active {
+  background-color: var(--deep-blue);
+}
+
 .facebook img {
   padding: 13px 17px 13px 17px;
 }
@@ -398,6 +423,16 @@ p {
 .youtube img {
   padding: 16px 13px 16px 13px;
 }
+.rating-box {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  margin-left: auto;
+  justify-self: flex-end;
+  width: 110px;
+}
+/*.stars {
+  margin-left: auto;
+} */
 .rating {
   width: 110px;
   height: 27px;

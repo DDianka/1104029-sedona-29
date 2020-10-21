@@ -1,9 +1,9 @@
-ul {
-  padding: 0;
-  margin: 0;
-}
+
 :root {
   --gray:  #888888;
+  --active: #BDBBBC;
+  --circle: #ABABAB;
+  --dark-gray: #666666;
   --blue: #81B3D2;
   --bluer: #669EC0;;
   --deep-blue: #5496BD;
@@ -15,7 +15,6 @@ ul {
   --browner: #604E43;
   --dark-brown:#503E33;
   --rating: #F2F2F2;
-  --dark-gray: #666666;
   --border-color: #E5E5E5;
 }
 body {
@@ -29,6 +28,10 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 700;
   background-position: top center;
+}
+ul {
+  padding: 0;
+  margin: 0;
 }
 li {
    list-style-type: none;
@@ -92,7 +95,7 @@ p {
 .wrapper {
   display: grid;
   grid-template-rows: 1fr min-content;
-  width: 940px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
   justify-content: center;
@@ -165,13 +168,24 @@ p {
   grid-gap: 0;
 }
 .features-list-2 {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 82px;
   padding: 0;
+  outline: 5px solid #ff0000;
+  offset: -5px;
 }
-.gift {
-  margin-top: 55px ;
+.gift::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/icon-gift.svg");
+  width: 64px;
+  height: 77px;
+  background-repeat: no-repeat;
+  margin-top: 55px;
+  margin-right: 55px;
+  background-position: 0 0;
 }
 .burger {
   margin-top: 61px ;
@@ -187,8 +201,12 @@ p {
   text-align: center;
 }
 .list-item p {
-  color: var(--white);
+  color: inherit;
 }
+.list-item h3 {
+  margin-top: 50px;
+}
+
 .footer-p {
   font-weight: bold;
   color: var(--black);
@@ -212,7 +230,6 @@ p {
 .appointment h3 {
   font-size: 30px;
   line-height: 24px;
-
 }
 .appointment {
   text-align: center;
@@ -241,6 +258,12 @@ p {
 .footer-copyright {
   display: flex;
   align-items: center;
+}
+.button:hover path {
+  fill: var(--blue);
+}
+.button:active path {
+  fill: var(--active);
 }
 /* inner page */
 

@@ -235,12 +235,12 @@ p {
 }
 .social-networks {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 .footer-copyright {
   display: flex;
   align-items: center;
-
 }
 /* inner page */
 
@@ -412,6 +412,11 @@ p {
 .twitter:active,
 .youtube:active {
   background-color: var(--deep-blue);
+}
+.facebook img:active,
+.twitter img:active,
+.youtube img:active {
+  opacity: 0.3;
 }
 
 .facebook img {

@@ -39,7 +39,7 @@
               <li class="filter-option filter-checkbox">
                 <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="parking"> <label for="parking">Парковка</label>
               </li>
-              <li class="filter-option filter-checkbox">
+              <li class="filter-option filter-checkbox3">
                 <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="wifi"><label for="wifi"> Wi-Fi </label>
             </ul>
           </fieldset>
@@ -48,23 +48,31 @@
           <ul class="filter-items">
             <li class="filter-option filter-checkbox"><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="hotel" checked> <label for="hotel">Гостиница</label></li>
             <li class="filter-option filter-checkbox"><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="motel" checked> <label for="motel">Мотель</label></li>
-            <li class="filter-option filter-checkbox"><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="aparts" checked> <label for="aparts">Апартаменты</label></li>
+            <li class="filter-option filter-checkbox3 "><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="aparts" checked> <label for="aparts">Апартаменты</label></li>
           </ul>
         </fieldset>
         </form>
         <form method="get" action="https://echo.htmlacademy.ru" class="cost-filter">
-          <fieldset class="filter-item">
+        <fieldset class="filter-item">
           <legend class="filter-header">
             Стоимость в сутки (Р):
           </legend>
           <!-- ОТ ДО и ползунок-->
+
           <div class="range">
-            <input id="from" type="number" placeholder=" От 0">
-            <input  id="to" type="number" placeholder="До 3000"> <br>
+            <label class="min-price"><input id="from" type="number" placeholder=" От 0"></label>
+            <div class="border"></div>
+            <label class="max-price"> <input  id="to" type="number" placeholder="До 3000"></label>  <br>
           </div>
-          <input class="slider" type="range"> <br>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="toggle toggle-min" tabindex="0"></div>
+            <div class="toggle toggle-max" tabindex="0"></div>
+          </div>
           <button type="button" class="button show"> ПОКАЗАТЬ </button>
-          </fieldset>
+        </fieldset>
         </form>
       </section>
       <section class="results">
@@ -76,7 +84,7 @@
           <p class="sort">Сортировка: </p>
           <ul class="sorting-links">
             <li>
-              <a class="price-sort current-sort" href="">По цене </a>
+              <a class="price-sort current-link" href="">По цене </a>
             </li>
             <li>
               <a class="type-sort" href=""> По типу </a>
@@ -85,12 +93,20 @@
               <a class="rating-sort" href="">По рейтингу </a>
             </li>
           </ul>
+          <div class="up-down-buttons">
+            <svg class="up" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+            </svg>
+            <svg class="down" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L11 0L0 0L5.5 10Z" fill="#CACACA"/>
+            </svg>
+          </div>
         </div>
 
         <ul class="hotels">
           <li>
             <div class="hotel">
-              <img src="img/amara.jpg" height="90" width="135" />
+              <img class="image" src="img/amara.jpg" height="90" width="135" />
               <div>
                 <h3>Amara Resort & Spa</h3>
                 <p>Гостиница    от 4000 Р.</p>
@@ -99,12 +115,18 @@
               </div>
               <div class="rating-box">
                 <p class="rating">Рейтинг: 8,5</p>
+                <div class="stars">
+                  <img class="star" src="img/star.svg" alt="star">
+                  <img class="star" src="img/star.svg" alt="star">
+                  <img class="star" src="img/star.svg" alt="star">
+                  <img class="star" src="img/star.svg" alt="star">
+                </div>
               </div>
             </div>
           </li>
           <li>
             <div class="hotel">
-              <img src="img/desert.jpg" height="90" width="135">
+              <img class="image" src="img/desert.jpg" height="90" width="135">
               <div>
                 <h3>Desert Quail Inn</h3>
                 <p>Мотель        от 4000 Р.</p>
@@ -113,12 +135,17 @@
               </div>
               <div class="rating-box">
                 <p class="rating">Рейтинг: 8,9</p>
+                <div class="stars">
+                  <img class="star" src="img/star.svg" alt="star">
+                  <img class="star" src="img/star.svg" alt="star">
+                  <img class="star" src="img/star.svg" alt="star">
+                </div>
               </div>
             </div>
           </li>
           <li>
             <div class="hotel">
-              <img src="img/diablo.png" height="90" width="135"  />
+              <img class="image" src="img/diablo.png" height="90" width="135" />
               <div>
                 <h3>Villas at Poco Diablo</h3>
                 <p>Апартаменты    от 4000 Р.</p>
@@ -127,7 +154,10 @@
               </div>
               <div class="rating-box">
                 <p class="rating">Рейтинг: 9,2</p>
-                <!-- <p class="stars"> zvezdochki</p> -->
+                <div class="stars">
+                  <img class="star" src="img/star.svg" alt="star">
+                  <img class="star" src="img/star.svg" alt="star">
+                </div>
               </div>
             </div>
           </li>

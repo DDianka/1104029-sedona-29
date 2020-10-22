@@ -310,7 +310,7 @@ p {
   display: flex;
   justify-content: space-between;
   width: 391px;
-  margin-top: 27px;
+  margin-top: 12.5px;
   margin-bottom: 32px;
 }
 .filter fieldset {
@@ -405,6 +405,14 @@ p {
   margin-bottom: 24px;
   margin-left: 112px;
 }
+.filter-item {
+  margin-top: 12.5px;
+  border: none;
+}
+.filter-item .filter-header {
+  margin-bottom: 10px;
+  margin-left: 0;
+}
 .filter-option label {
   position: relative;
   display: block;
@@ -425,18 +433,29 @@ p {
   position: absolute;
   left: -42px;
   top: 0;
-  width: 23px;
+  width: 27px;
   height: 23px;
-  background-image: url("../img/checked-box.svg");
+  background-image: url("../img/checkbox-on.svg");
 }
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked:disabled + label::after {
   content: "";
   position: absolute;
   top: 1px;
   left: -38px;
   width: 22px;
   height: 17px;
-  background-image: url("../img/checked.svg");
+  background-image: url("../img/checkbox-on-disabled.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.filter-input-checkbox:checked:disabled + label::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -38px;
+  width: 22px;
+  height: 17px;
+  background-image: url("../img/checkbox-off-disabled.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -458,6 +477,10 @@ p {
 .sorting-links li:nth-child(2) {
   margin-right: 33px;
 }
+/* .current-sort {*/
+/*  text-decoration: none;*/
+/*  color: var(--blue);*/
+/*}*/
 
 .found {
   font-size: 21px;

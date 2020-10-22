@@ -34,36 +34,38 @@
             </legend>
             <ul class="filter-items">
               <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="pool"> <label for="pool">Бассейн</label>
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="pool" checked> <label for="pool">Бассейн</label>
               </li>
               <li class="filter-option filter-checkbox">
                 <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="parking"> <label for="parking">Парковка</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="wifi"><label for="wifi"> Wi-Fi
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="wifi"><label for="wifi"> Wi-Fi </label>
             </ul>
           </fieldset>
         <fieldset class="type">
           <legend class="filter-header">Тип жилья:</legend>
           <ul class="filter-items">
-            <li class="filter-option filter-checkbox"><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="hotel"> <label for="hotel">Гостиница</label></li>
-            <li class="filter-option filter-checkbox"><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="motel"> <label for="motel">Мотель</label></li>
-            <li class="filter-option filter-checkbox"><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="aparts"> <label for="aparts">Апартаменты</label></li>
+            <li class="filter-option filter-checkbox"><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="hotel" checked> <label for="hotel">Гостиница</label></li>
+            <li class="filter-option filter-checkbox"><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="motel" checked> <label for="motel">Мотель</label></li>
+            <li class="filter-option filter-checkbox"><input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="aparts" checked> <label for="aparts">Апартаменты</label></li>
           </ul>
         </fieldset>
         </form>
-        <div class="cost-filter">
-          <h3 class="filter-header">
+        <form method="get" action="https://echo.htmlacademy.ru" class="cost-filter">
+          <fieldset class="filter-item">
+          <legend class="filter-header">
             Стоимость в сутки (Р):
-          </h3>
+          </legend>
           <!-- ОТ ДО и ползунок-->
           <div class="range">
-            <input id="from" type="number" placeholder=" ОТ 0">
-            <input  id="to" type="number" placeholder="ДО 3000"> <br>
+            <input id="from" type="number" placeholder=" От 0">
+            <input  id="to" type="number" placeholder="До 3000"> <br>
           </div>
           <input class="slider" type="range"> <br>
           <button type="button" class="button show"> ПОКАЗАТЬ </button>
-        </div>
+          </fieldset>
+        </form>
       </section>
       <section class="results">
         <h2 hidden>Результаты поиска</h2>
@@ -74,7 +76,7 @@
           <p class="sort">Сортировка: </p>
           <ul class="sorting-links">
             <li>
-              <a class="price-sort" href="">По цене </a>
+              <a class="price-sort current-sort" href="">По цене </a>
             </li>
             <li>
               <a class="type-sort" href=""> По типу </a>
@@ -95,7 +97,6 @@
                 <a class="more-info button " href=""> Подробнее </a>
                 <a class="book button" href="">Забронировать</a>
               </div>
-
               <div class="rating-box">
                 <p class="rating">Рейтинг: 8,5</p>
               </div>

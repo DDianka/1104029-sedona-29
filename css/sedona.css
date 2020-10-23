@@ -672,10 +672,12 @@ input::-webkit-inner-spin-button {
 .youtube img {
   padding: 16px 13px 16px 13px;
 }
-.up-down-buttons {
-  display: flex;
+.up-down-buttons  {
   margin-left: auto;
   margin-right: 73px;
+}
+.up-down-list {
+  display: flex;
 }
 .up {
   margin-right: 12px;

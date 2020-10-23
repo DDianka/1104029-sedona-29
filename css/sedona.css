@@ -96,7 +96,6 @@ p {
   grid-template-rows: 1fr min-content;
   width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
   justify-content: center;
 }
 .main-nav a {
@@ -258,7 +257,8 @@ p {
 }
 .main-footer {
   display: flex;
-  margin-left: 111px;
+  margin: 0 auto;
+  width: 1200px;
 }
 .container {
   display: flex;
@@ -266,8 +266,6 @@ p {
   justify-content: space-around;
   width: 1200px;
   height: 120px;
-  margin: 0 auto;
-  padding-right: 100px ;
   background: rgba(255, 255, 255, 0.9);
 }
 .social-networks {
@@ -317,6 +315,10 @@ p {
   justify-content: space-between;
   width: 391px;
   margin-top: 13px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 .filter fieldset {
   padding: 0;
@@ -393,6 +395,7 @@ p {
   border-radius: 2px;
   color: var(--white);
   outline: none;
+  text-align: center;
 }
 .range input::-moz-placeholder {
   color: var(--white);
@@ -614,12 +617,14 @@ p {
 }
 .book:active {
   background-color: var(--dark-brown);
+  color: rgba(255,255,255, 0.3);
 }
 .more-info:hover {
   background-color: var(--bluer) ;
 }
 .more-info:active {
   background-color: var(--deep-blue) ;
+  color: rgba(255,255,255, 0.3);
 }
 
 .hotels h3 {

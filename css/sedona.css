@@ -50,6 +50,7 @@ h2 {
 p {
   font-weight: 400;
   color: var(--light-black);
+  line-height: 21px;
 }
 .page {
   height: 100%;
@@ -59,6 +60,7 @@ p {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  background-color: var(--rating);
 }
 .main-nav {
   display: flex;
@@ -67,17 +69,23 @@ p {
   width: 1200px;
   margin: 0 auto;
   height: 56px;
-
+  background-color: var(--white);
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 .main-header-logo {
   position: absolute;
   left: 50%;
   top:0;
   transform: translateX(-50%);
-
   width: 138px;
   height: 70px;
   justify-content: center;
+}
+.left-list  li:last-child {
+  margin-right: 133px;
+}
+.right-list li:first-child {
+  margin-left: 147px;
 }
 .main-header {
   margin-bottom: 70px;
@@ -97,6 +105,8 @@ p {
   width: 1200px;
   margin: 0 auto;
   justify-content: center;
+  background-color: var(--white);
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 .main-nav a {
   display: flex;
@@ -145,11 +155,11 @@ p {
   margin: 75px 370px;
 }
 .features .header {
-  margin-top:42.5px;
-  margin-bottom: 16.5px;
+  margin-top:43px;
+  margin-bottom: 46px;
 }
 .features .main-text {
-  margin-bottom: 51px;
+  margin-bottom: 55px;
 }
 .feature-item-2 h3,
 .feature-item h3{
@@ -170,7 +180,7 @@ p {
 .features-list-2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 82px;
+  margin-bottom: 66px;
   padding: 0;
 }
 .feature-item-2 h3 {
@@ -223,9 +233,14 @@ p {
   color: inherit;
 }
 .list-item h3 {
-  margin-top: 50px;
+  margin-top: 47px;
 }
-
+.list-item p:nth-child(2) {
+  margin-top: 26px;
+}
+.list-item p:last-child {
+  margin-top: 22px;
+}
 .footer-p {
   font-weight: bold;
   color: var(--black);
@@ -243,8 +258,8 @@ p {
   background-color: var(--light-gray);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding-bottom: 24px;
-  padding-top: 15px;
+  padding-bottom: 35px;
+  padding-top: 25px;
 }
 .appointment h3 {
   font-size: 30px;
@@ -252,8 +267,161 @@ p {
 }
 .appointment {
   text-align: center;
-  margin-bottom: 145px;
-  margin-top: 58px;
+  margin-bottom: -120px;
+  margin-top: 57px;
+}
+.appointment-info {
+  margin-top: 36px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 37px;
+}
+.booking-menu {
+  position: absolute;
+  width: 568px;
+  height: 395px;
+  background-color: var(--white);
+}
+.booking-menu input {
+  border: none;
+  height: 38px;
+  background-color:var(--rating) ;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  box-sizing: border-box;
+  outline: none;
+}
+.menu-fields {
+  margin: 55px 55px 54px 55px;
+}
+.check-date input {
+  width: 346px;
+  color: var(--black);
+  text-transform: uppercase;
+  padding-left: 12px;
+}
+.check-date svg {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.calendar:hover path,
+.minus:hover rect,
+.plus:hover path {
+  fill: var(--black);
+}
+.calendar:active path,
+.minus:active rect,
+.plus:active path {
+  fill: var(--blue);
+}
+.check-date {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.check-date:first-child {
+  margin-bottom: 26px;
+}
+.adults-amount {
+  text-align: center;
+  width: 114px;
+  padding: 0;
+}
+.children-amount {
+  text-align: center;
+  width: 114px;
+  padding: 0;
+}
+.tourists-amount {
+  margin-top: 33px;
+  display: flex;
+  justify-content: space-between;
+}
+.adults-amount {
+  margin-left: 40px;
+}
+.children-amount {
+  margin-left: 27px;
+}
+.counter {
+  position: relative;
+}
+.counter svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.plus {
+  right: 14px;
+}
+.minus{
+  right: 89px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: var(--black);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: var(--black);
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: var(--black);
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: var(--black);
+}
+.find-button {
+  background-color: var(--blue);
+  width: 458px;
+  height: 58px;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--white);
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  outline: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+}
+.find-button:hover {
+  background-color: var(--bluer);
+  color: var(--white);
+}
+.find-button:active {
+  background-color: var(--deep-blue);
+  color: rgba(255,255,255, 0.3);
+}
+.hotel-search-button {
+  background-color: var(--brown);
+  color: var(--white);
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  width: 568px;
+  height: 86px;
+  outline: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+}
+.hotel-search-button:hover {
+  background-color: var(--browner);
+  color: var(--white);
+}
+.hotel-search-button:active {
+  background-color: var(--dark-brown);
+  color: rgba(255,255,255, 0.3);
 }
 .main-footer {
   display: flex;
@@ -267,6 +435,7 @@ p {
   width: 1200px;
   height: 120px;
   background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 .social-networks {
   display: flex;
@@ -336,7 +505,19 @@ input::-webkit-inner-spin-button {
   flex-wrap: wrap;
   border-top: 1px solid var(--border-color);
 }
-
+.price-tag {
+  display: flex;
+  margin-top: -27px;
+}
+.motel p {
+  margin-right: 65px;
+}
+.hostel p {
+  margin-right: 40px;
+}
+.aparts p {
+  margin-right: 22px;
+}
 .hotels:last-child  {
   border-bottom: 1px solid var(--border-color);
 }
@@ -368,16 +549,16 @@ input::-webkit-inner-spin-button {
   height: 36px;
   border: none;
 }
-::-webkit-input-placeholder {
+.range input::-webkit-input-placeholder {
   text-align:center;
 }
-:-moz-placeholder { /* Firefox 18- */
+.range input:-moz-placeholder { /* Firefox 18- */
   text-align:center;
 }
-::-moz-placeholder {  /* Firefox 19+ */
+.range input::-moz-placeholder {  /* Firefox 19+ */
   text-align:center;
 }
-:-ms-input-placeholder {
+.range input:-ms-input-placeholder {
   text-align:center;
 }
 .range button {
@@ -566,6 +747,7 @@ input::-webkit-inner-spin-button {
 .sorting-links {
   display: flex;
   font-weight: 400;
+  font-size: 12px;
 }
 .current-link {
   border-bottom: none;

@@ -80,6 +80,7 @@ p {
   width: 138px;
   height: 70px;
   justify-content: center;
+  z-index: 1;
 }
 .left-list  li:last-child {
   margin-right: 133px;
@@ -145,11 +146,21 @@ p {
   position: relative;
 }
 .logo-img {
+  position: relative;
   background-image:url("../img/background-photo.jpg");
   background-repeat: no-repeat;
   width: 1200px;
   height: 509px;
   text-align: center;
+}
+.logo-img::after {
+  position: absolute;
+  background-image: url("../img/mask.png");
+  bottom: 0;
+  content: "";
+  width: 1200px;
+  height: 57px;
+  display: block;
 }
 .logo {
   margin: 75px 370px;

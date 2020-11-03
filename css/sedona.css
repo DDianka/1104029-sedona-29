@@ -176,6 +176,13 @@ p {
 .feature-item h3{
   font-size: 21px;
   line-height: 21px;
+  margin-top: 0;
+}
+.advantage-list p:nth-child(2) {
+  margin-top: 27px;
+}
+.advantage-list p:last-child {
+  margin-top: 23px;
 }
 .item-img {
   display: grid;
@@ -191,7 +198,7 @@ p {
 .features-list-2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 66px;
+  margin-bottom: 72px;
   padding: 0;
 }
 .feature-item-2 h3 {
@@ -244,7 +251,7 @@ p {
   color: inherit;
 }
 .list-item h3 {
-  margin-top: 47px;
+  margin-top: 48px;
 }
 .list-item p:nth-child(2) {
   margin-top: 26px;
@@ -269,8 +276,8 @@ p {
   background-color: var(--light-gray);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding-bottom: 35px;
-  padding-top: 25px;
+  padding-bottom: 40px;
+  padding-top: 45px;
 }
 .appointment h3 {
   font-size: 30px;
@@ -278,8 +285,8 @@ p {
 }
 .appointment {
   text-align: center;
-  margin-bottom: -120px;
-  margin-top: 57px;
+  margin-bottom: -128px;
+  margin-top: 28px;
 }
 .appointment-info {
   margin-top: 36px;
@@ -287,7 +294,7 @@ p {
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-top: 37px;
+  margin-top: 33px;
 }
 .booking-menu {
   position: absolute;
@@ -316,11 +323,13 @@ p {
   text-transform: uppercase;
   padding-left: 12px;
 }
-.check-date svg {
+.check-date button {
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
+  border: none;
+  outline: none;
 }
 .calendar:hover path,
 .minus:hover rect,
@@ -373,7 +382,7 @@ p {
 .plus {
   right: 14px;
 }
-.minus{
+.minus {
   right: 89px;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
@@ -499,6 +508,9 @@ p {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 .filter fieldset {
   padding: 0;
@@ -801,7 +813,7 @@ input::-webkit-inner-spin-button {
   padding: 3px 16px 3px 17px;
 }
 
- button:hover {
+ .show:hover {
   background-color: var(--white);
   color:var(--black)
 }

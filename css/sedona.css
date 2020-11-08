@@ -89,11 +89,20 @@ button {
   justify-content: center;
   z-index: 1;
 }
-.left-list  li:last-child {
-  margin-right: 133px;
+.menu-list li:nth-child(1),
+.menu-list li:nth-child(2) {
+  text-align: left;
 }
-.right-list li:first-child {
-  margin-left: 144px;
+.menu-list li:nth-child(3),
+.menu-list li:nth-child(4) {
+  text-align: right;
+}
+.menu-list li:nth-child(3) {
+  margin-left: 153px;
+}
+.menu-list li {
+  display: inline-block;
+  width: 223px;
 }
 .main-header {
   margin-bottom: 70px;
@@ -117,8 +126,6 @@ button {
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 .main-nav a {
-  display: flex;
-  flex-wrap: wrap;
   color: var(--black);
   text-decoration: none;
   line-height: 26px;
@@ -128,9 +135,10 @@ button {
 .main-nav ul {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  width: 1200px;
   justify-content: space-around;
   align-items: center;
+  padding: 0 72px;
 }
 .main-nav a:link {
   color: var(--black);;

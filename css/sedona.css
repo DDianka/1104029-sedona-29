@@ -575,6 +575,9 @@ input[type='number'] {
   flex-wrap: wrap;
   border-top: 1px solid var(--border-color);
 }
+.hotel h3 {
+  margin-top: 26px;
+}
 .price-tag {
   display: flex;
   margin-top: -27px;
@@ -647,6 +650,7 @@ input[type='number'] {
   color: var(--white);
   outline: none;
   text-align: center;
+  padding-bottom: 8px;
 }
 .range input::-moz-placeholder {
   color: var(--white);
@@ -749,8 +753,8 @@ input[type='number'] {
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: -42px;
-  top: 0;
+  left: -40px;
+  top: 1px;
   width: 23px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
@@ -758,8 +762,8 @@ input[type='number'] {
 .filter-input-checkbox:checked + label::before {
   content: "";
   position: absolute;
-  left: -42px;
-  top: 0;
+  left: -40px;
+  top: 1px;
   width: 27px;
   height: 23px;
   background-image: url("../img/checkbox-on.svg");
@@ -847,7 +851,7 @@ input[type='number'] {
   background-color: var(--blue);
   width: 110px;
   height: 27px;
-  padding: 3px 16px 3px 17px;
+  padding: 4px 14px 5px 17px;
   margin-right: 6px;
   font-weight: bold;
 }
@@ -855,7 +859,7 @@ input[type='number'] {
   background-color: var(--brown);
   width: 142px;
   height: 27px;
-  padding: 3px 16px 3px 17px;
+  padding: 4px 16px 5px 16px;
   font-weight: bold;
 }
 
@@ -966,5 +970,6 @@ input[type='number'] {
   background-color: var(--rating);
   color: var(--dark-gray);
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  padding-top: 2px;
 }
